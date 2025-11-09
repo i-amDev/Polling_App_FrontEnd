@@ -1,0 +1,29 @@
+<p>poll-component works!</p>
+<button type="button" class="btn btn-primary">Primary</button>
+<div class="container mt-4">
+  <h2 class="text-center">Create Poll</h2>
+  <div class="mb-3">
+    <input [(ngModel)]="newPoll.question" type = "text" placeholder="Poll Question" class="form-control" required>
+  </div>
+  <div class="options-container mb-3">
+    <div class="input-group mb-2">
+      @for (option of newPoll.options; track option.voteCount) {
+        <input [(ngModel)]="option.voteOption" type = "text" placeholder="Option" class="form-control" required>
+      }
+    </div>
+  </div>
+</div>
+<button (click)="createPoll()" class="btn btn-primary">Create Poll</button>
+<h1>Available Polls</h1>
+<div>
+  @for (item of polls; track item.id) {
+    <h2>{{item.id}}</h2>
+    <h2>{{item.question}}</h2>
+    <div>
+      @for (opt of item.options; track opt.voteCount) {
+        <h2>For vote option {{opt.voteOption}} the vote count is {{opt.voteCount}}</h2>
+      }
+    </div>
+
+  }
+</div>
