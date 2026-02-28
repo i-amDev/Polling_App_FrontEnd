@@ -10,3 +10,4 @@ import {PollComponent} from './poll-component/poll-component';
 export class App {
   protected readonly title = signal('poll-app');
 }
+
