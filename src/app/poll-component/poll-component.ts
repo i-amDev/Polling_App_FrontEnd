@@ -64,5 +64,4 @@ export class PollComponent implements OnInit {
   trackByIndex(index : number) : number {
     return index;
   }
-
 }
