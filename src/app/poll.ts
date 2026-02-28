@@ -28,3 +28,4 @@ export class PollService {
     return this.http.post<void>(this.voteUrl, {pollId, optionIndex});
   }
 }
+
