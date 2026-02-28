@@ -8,3 +8,4 @@ export interface Poll {
   question: string;
   options: OptionVote[];
 }
+
